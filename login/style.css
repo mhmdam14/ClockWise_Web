@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+ background-color: white;
+ display: flex;
+ min-height: 100vh;
+
+}
+
+.container{
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+}
+
+.left-side{
+  background-color: #2196F3;
+  flex: 1;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+  color:#fff;
+}
+
+.left-side ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.left-side li {
+  margin-top: 70px;
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center vertically */
+  gap: 10px; /* Add spacing between image and text */
+}
+
+#logo-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px; /* Adjust size as needed */
+}
+
+
+.right-side{
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-content{
+  flex: 1;
+  max-width: 40%;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2196F3;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #000;
+  margin: 15px 0;
+  margin-top: 20px;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #000;
+}
+
+.forget:visited{
+  color: #000;
+}
+
+
+#remember {
+  accent-color: #000;
+}
+
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label p {
+  margin-left: 8px;
+}
+
+button {
+  background: #2196F3;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  color: #fff;
+  transform: scale(1.05);
+  background-color: #0089fa;
+}
+
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #000;
+}
+
+.register :visited{
+  color: #000;
+}
+.error-message{
+  color: rgb(248, 8, 8);
+  text-align: center;}

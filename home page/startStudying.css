@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #2196F3;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .icon1 img {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar .logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.parent {
+    flex: 1;
+    display: flex;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin: 15px;
+}
+
+.navbar1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    border-radius: 1%;
+    border: solid lightgray 2px;
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.navbar1 ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-top: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar1 ul li {
+    display: flex;
+}
+
+.navbar1 ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar1 ul li.active a,
+.navbar1 ul li a:hover {
+    background-color: #e8f0fe;
+    border-left: 4px solid #2196F3;
+    color: #3b82f6;
+}
+
+.navbar1 ul li.active a .icon,
+.navbar1 ul li a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(70%) saturate(748%) hue-rotate(194deg) brightness(96%) contrast(92%);
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: brightness(0);
+}
+
+.navbar1 ul li.logout-button {
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+.navbar1 ul li.logout-button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar1 ul li.logout-button a:hover {
+    background-color: #e53e3e;
+    color: white;
+    border-left: 4px solid white;
+}
+
+.navbar1 ul li.logout-button a .icon {
+    filter: brightness(0);
+}
+
+.navbar1 ul li.logout-button a:hover .icon {
+    filter: brightness(0) invert(1);
+}
+
+.study-section {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#2196F3;
+}
+
+.study-container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 30px 60px; /* Increased padding */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Increased width */
+    max-width: 900px; /* Increased max-width */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+    height: auto;
+}
+
+.study-container h1 {
+    font-size: 4rem; /* Larger font size for a stronger presence */
+    color: #2196F3;
+    margin-bottom: 20px;
+    font-weight: 600; /* Boldens the text even more */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Increased letter spacing for a cleaner look */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Smooth, modern font */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.Timer {
+    font-size: 4.5rem; /* Increased font size */
+    font-weight: 700;
+    color: #2196F3;
+    margin-top: 30px;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px; /* Increased max-width */
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.button-container {
+    margin-top: 40px;
+}
+
+.motivation {
+    font-size: 1.6rem; /* Slightly larger font size for emphasis */
+    font-weight: 600;  /* Make it bolder */
+    color: #333;       /* Darker color for better readability */
+    text-align: center; /* Center the text */
+    font-style: italic; /* Italics for emphasis */
+    letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+.motivation p {
+    margin-top:40px;
+    margin-bottom: 10px; /* Space between paragraphs */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+.motivation span {
+    font-size: 1.8rem;  /* Increase font size for emphasis */
+    color: #2196F3;     /* Use the primary color for emphasis */
+    font-weight: 700;   /* Make it bold */
+}
+
+.button-container button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.button-container button:hover {
+    background-color: #2196F3;
+    transform: translateY(-3px);
+}
+
+.button-container button:active {
+    transform: translateY(1px);
+}
+
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 143, 255, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #2196F3;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar .icon1 img {
+    height: 30px; 
+    width: 30px; 
+    margin-right: 10px; 
+}
+.navbar .logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+.parent {
+    flex: 1;
+    display: flex;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin: 15px;
+}
+.navbar1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    border-radius: 1%;
+    border: solid lightgray 2px;
+    background-color: white;
+    padding-bottom: 15px; /* Add some space at the bottom */
+}
+.navbar1 ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-top: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.navbar1 ul li {
+    display: flex;
+    ;
+}
+.navbar1 ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar1 ul li.active a,
+.navbar1 ul li a:hover {
+    background-color: #e8f0fe;
+    border-left: 4px solid #3b82f6;
+    color: #3b82f6;
+}
+.navbar1 ul li.active a .icon,
+.navbar1 ul li a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(70%) saturate(748%) hue-rotate(194deg) brightness(96%) contrast(92%);
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: brightness(0);
+}
+.navbar1 ul li.logout-button {
+    margin-top: auto; /* Push the button to the bottom */
+    padding: 10px 0;
+}
+.navbar1 ul li.logout-button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar1 ul li.logout-button a:hover {
+    background-color: #e53e3e; /* Red background on hover */
+    color: white; /* White text on hover */
+    border-left: 4px solid white;
+}
+.navbar1 ul li.logout-button a .icon {
+    filter: brightness(0);
+}
+.navbar1 ul li.logout-button a:hover .icon {
+    filter: brightness(0) invert(1); /* Make the icon white */
+}
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    background-color: #2196F3;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Content */
+
+
+/* Upload Section */
+.container {
+    flex: 1;
+    background:#ffffff;
+    background-size: cover;
+    border-radius: 12px;
+    padding: 30px;
+    min-width: 1000px;
+    margin: 40px auto;
+    max-height:538px;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    scrollbar-width: none;
+}
+
+.container {
+    -ms-overflow-style: none;
+}
+h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.choose-file-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.choose-file-btn:hover {
+    background: #e74c3c;
+}
+input[type="file"] {
+    display: none;
+}
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    background: #2196F3;;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+input[type="submit"]:hover {
+    background: #e74c3c;
+}
+
+/* Uploaded Files */
+.uploaded-files {
+    margin-top: 30px;
+    color: white;
+}
+.audio-item {
+
+    background: #2196F3;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.audio-item audio {
+    width: 70%;
+    max-width: 400px;
+    margin-right: 15px;
+}
+.audio-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.delete-btn {
+    color: #fff;
+    background: #e74c3c;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.delete-btn:hover {
+    background: #c0392b;
+}
+@media (max-width: 768px) {
+    .navbar1 {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .parent {
+        margin-left: 0;
+        padding: 100px;
+    }
+    .container {
+        width: 90%;
+    }
+}

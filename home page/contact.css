@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #2196F3;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar .icon1 img {
+    height: 30px; 
+    width: 30px; 
+    margin-right: 10px; 
+}
+.navbar .logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+.parent {
+    flex: 1;
+    display: flex;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin: 15px;
+}
+.navbar1 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    border-radius: 1%;
+    border: solid lightgray 2px;
+    background-color: white;
+    padding-bottom: 15px; /* Add some space at the bottom */
+}
+.navbar1 ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-top: 5px;
+    margin-top: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.navbar1 ul li {
+    display: flex;
+}
+.navbar1 ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar1 ul li.active a,
+.navbar1 ul li a:hover {
+    background-color: #e8f0fe;
+    border-left: 4px solid #2196f3;
+    color: #2196f3;
+}
+.navbar1 ul li.active a .icon,
+.navbar1 ul li a:hover .icon {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(70%) saturate(748%) hue-rotate(194deg) brightness(96%) contrast(92%);
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    filter: brightness(0);
+}
+.navbar1 ul li.logout-button {
+    margin-top: auto; /* Push the button to the bottom */
+    padding: 10px 0;
+}
+.navbar1 ul li.logout-button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar1 ul li.logout-button a:hover {
+    background-color: #e53e3e; /* Red background on hover */
+    color: white; /* White text on hover */
+    border-left: 4px solid white;
+}
+.navbar1 ul li.logout-button a .icon {
+    filter: brightness(0);
+}
+.navbar1 ul li.logout-button a:hover .icon {
+    filter: brightness(0) invert(1); /* Make the icon white */
+}
+
+/* Main Content Layout */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: #2196f3;
+    padding: 20px;
+}
+
+/* Contact Form */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 900px; /* Increased width */
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Form Heading */
+h2 {
+    margin-bottom: 15px;
+    color: #2196f3;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 18px;
+}
+
+/* Form Structure */
+form {
+    width: 100%;
+}
+
+/* Centering Form Fields More to the Right */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Move items to the right */
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 100px; /* Adjusts label & input position */
+}
+
+/* Bigger Labels */
+label {
+    font-weight: bold;
+    color: #333;
+    font-size: 22px;
+    width: 220px; /* Consistent width for alignment */
+    text-align: right;
+    margin-right: 20px;
+}
+
+/* Bigger Inputs */
+input, textarea {
+    flex: 1;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 100%;
+    transition: border 0.3s ease-in-out;
+    max-width: 500px; /* Keeps input size balanced */
+}
+
+textarea {
+    resize: none;
+    height: 140px;
+}
+
+/* Input Focus Effect */
+input:focus, textarea:focus {
+    border-color: #2196f3;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background: #2196f3;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #1e3a8a;
+    transform: scale(1.05);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
